@@ -1,0 +1,63 @@
+<!-- ABOUTME: Contact page for the Troutwater Restoration static site.
+     ABOUTME: Placeholder contact method until a real email/phone/form backend is set up. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Troutwater Restoration</title>
+  <meta name="description" content="Contact Troutwater Restoration, LLC, based in Bozeman, Montana.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.jpg" alt="Troutwater Restoration logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About TWR</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1>Contact TWR</h1>
+        <p class="address">Bozeman, Montana 59715</p>
+
+        <!-- TODO: Replace this placeholder once a real contact email/phone or
+             form backend (e.g. Formspree) is set up. The original Wix site's
+             contact form posted to a Wix-hosted backend with no public email
+             or phone number exposed on the page, so there was nothing to
+             carry over directly. -->
+        <div class="contact-placeholder">
+          <p><strong>Contact details coming soon.</strong></p>
+          <p>In the meantime, reach out directly to discuss a project.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>TWR</h2>
+      <p class="tagline">River Restoration Design</p>
+      <p class="address">Bozeman, Montana 59715</p>
+      <p class="copyright">&copy; <span id="year"></span> Troutwater Restoration, LLC.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

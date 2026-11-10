@@ -1,0 +1,118 @@
+<!-- ABOUTME: Home page for the Troutwater Restoration static site.
+     ABOUTME: Hero, service highlights, client list, and example project types. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Troutwater Restoration</title>
+  <meta name="description" content="Troutwater Restoration, LLC provides river, stream and wetland restoration design, environmental permitting, and construction oversight in Montana and Wyoming.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.jpg" alt="Troutwater Restoration logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About TWR</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image: url('assets/images/hero-home.jpg');">
+      <div class="hero-content">
+        <ul>
+          <li>Better fish habitat and fishing</li>
+          <li>Increased wildlife habitat</li>
+          <li>Real estate improvement</li>
+          <li>Irrigation efficiency</li>
+          <li>Reduction of riverbank erosion / land loss</li>
+        </ul>
+        <h1>What Troutwater Restoration, LLC. can do for you</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>River, Stream and Wetland Restoration Design</h2>
+        <p>Environmental Permitting</p>
+        <p>Construction Oversight</p>
+        <div class="tile-grid">
+          <img src="assets/images/home-tile-1.jpg" alt="Restoration design site photo">
+          <img src="assets/images/home-tile-2.jpg" alt="Stream restoration construction photo">
+          <img src="assets/images/home-tile-3.jpg" alt="Elbow Coulee restoration project, phase 3">
+        </div>
+        <a class="read-more" href="services.html">Read more</a>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="container">
+        <h2>Clients</h2>
+        <div class="clients-grid">
+          <div>Private Landowners</div>
+          <div>Other Professionals and Consultants</div>
+          <div>Private ranch companies</div>
+          <div>Watershed Groups</div>
+          <div>Non-profits</div>
+          <div>State and Federal land agencies</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt">
+      <div class="container">
+        <p class="eyebrow">Unique, insightful, cost effective projects</p>
+        <h2>TWR Example Project Types</h2>
+        <ul class="project-types">
+          <li>
+            <strong>Stream channels and wetlands that were re-aligned for agriculture usage.</strong>
+            <em>Example solution: put the stream back into its original alignment, restoring riffle/pool sequence, streambanks and the adjacent riparian area.</em>
+          </li>
+          <li>
+            <strong>Streams and rivers with land previously only managed for livestock.</strong>
+            <em>Example solution: change or remove grazing impacts and restore and enhance the impacted reaches.</em>
+          </li>
+          <li>
+            <strong>Streams and rivers with land previously only managed for farming and irrigation.</strong>
+            <em>Example solution: relocate irrigation water off and out of the impacted streams, enhance and restore to a more natural hydrograph and stream channel cross-sectional area.</em>
+          </li>
+          <li>
+            <strong>Streams and rivers adversely impacted by agriculture infrastructure.</strong>
+            <em>Example solution: route stream or river around infrastructure to the extent reasonable.</em>
+          </li>
+          <li>
+            <strong>Streams and rivers adversely impacted by urbanizing watersheds.</strong>
+            <em>Example solution: install a robust, more resilient sub-gradient and bio-engineer river banks.</em>
+          </li>
+        </ul>
+        <a class="read-more" href="projects.html">Read more</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>TWR</h2>
+      <p class="tagline">River Restoration Design</p>
+      <p class="address">Bozeman, Montana 59715</p>
+      <p><a href="contact.html" style="color:#fff;">Contact TWR &rarr;</a></p>
+      <p class="copyright">&copy; <span id="year"></span> Troutwater Restoration, LLC.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

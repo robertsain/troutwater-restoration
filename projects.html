@@ -1,0 +1,105 @@
+<!-- ABOUTME: Projects page for the Troutwater Restoration static site.
+     ABOUTME: Featured project galleries: 2nd Yellow Mule / South Fork Gallatin River, and Green Canyon Creek. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Troutwater Restoration</title>
+  <meta name="description" content="Featured Troutwater Restoration projects, including the 2nd Yellow Mule and South Fork Gallatin River riverbank and fish habitat enhancement, and Green Canyon Creek restoration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.jpg" alt="Troutwater Restoration logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About TWR</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <p class="eyebrow">Unique, insightful, cost effective</p>
+        <h1>Featured Projects</h1>
+        <p>Below you'll find some selected projects that TWR has designed or that are in progress.</p>
+
+        <div class="project-feature">
+          <h3>2nd Yellow Mule and South Fork Gallatin River</h3>
+          <p class="subtitle">Riverbank fix and fish habitat enhancement &mdash; previous landslide area, riverbank erosion, excessive deposits of rock and lack of fish habitat. Project construction completed in November 2022. Photos represent before construction and monitoring year one, 2023.</p>
+          <div class="gallery-grid">
+            <figure>
+              <img src="assets/images/project-yellowmule-1-drone.jpg" alt="Drone aerial image of monitoring year one">
+              <figcaption>Drone aerial image of monitoring year one.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/project-yellowmule-2-bioengineered-bank.jpg" alt="Bio engineered riverbank, native seed mix and willow stakes">
+              <figcaption>Bio-engineered riverbank, native seed mix and willow stakes.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/project-yellowmule-3-before-after.jpg" alt="Before and after monitoring">
+              <figcaption>Before and after monitoring.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/project-yellowmule-4-aug2023.jpg" alt="August 2023 photo taken facing upstream">
+              <figcaption>August 2023, facing upstream.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/project-yellowmule-5-before-after-bank.jpg" alt="Before and after riverbank fix">
+              <figcaption>Before and after riverbank fix.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/project-yellowmule-6-bdas.jpg" alt="BDAs in side channel to provide better juvenile fish habitat">
+              <figcaption>BDAs placed where 2nd Yellow Mule Creek joins the South Fork, now in the side channel to provide better juvenile fish habitat and act as a floodplain grade control structure at high water.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/project-yellowmule-7-vegetation.jpg" alt="Vegetation re-establishment including good willow stake survival">
+              <figcaption>Vegetation re-establishment, including good willow stake survival.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/project-yellowmule-8-trout.jpg" alt="Westslope Cutthroat Trout caught at the project site in August 2023">
+              <figcaption>Westslope Cutthroat Trout caught at the project site, August 2023. Multiple other trout were observed in this restoration reach, actively rising and feeding.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-feature">
+          <h3>Green Canyon Creek, Gallatin County, MT</h3>
+          <p class="subtitle">Jurisdiction delineation, fluvial geomorphic assessment, design, permitting and construction oversight.</p>
+          <div class="gallery-grid">
+            <figure>
+              <img src="assets/images/project-greencanyon-cover.jpg" alt="Green Canyon Creek project site">
+              <figcaption>Green Canyon Creek project site.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>TWR</h2>
+      <p class="tagline">River Restoration Design</p>
+      <p class="address">Bozeman, Montana 59715</p>
+      <p><a href="contact.html" style="color:#fff;">Contact TWR &rarr;</a></p>
+      <p class="copyright">&copy; <span id="year"></span> Troutwater Restoration, LLC.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

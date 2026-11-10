@@ -1,0 +1,79 @@
+<!-- ABOUTME: About page for the Troutwater Restoration static site.
+     ABOUTME: Team bios for Robert Sain and Scott Turo. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About TWR | Troutwater Restoration</title>
+  <meta name="description" content="Meet the Troutwater Restoration team: Robert Sain, Principal Stream Restoration Practitioner, and Scott Turo, Fish Biologist and Restoration Project Manager.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.jpg" alt="Troutwater Restoration logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About TWR</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1>About TWR</h1>
+        <div class="team-grid">
+          <div class="team-card">
+            <img src="assets/images/team-robert-sain.jpg" alt="Robert Sain">
+            <h3>Robert Sain</h3>
+            <p class="eyebrow">Principal, Stream Restoration Practitioner</p>
+            <p>Robert Sain founded Troutwater Consulting to bring 25 years of hands-on river restoration experience directly to landowners and project partners. He has a multidisciplinary background in fish habitat biology, hydrology, fluvial geomorphology, and biological systems engineering. He has also been an angler all his life and knows how trout use a river. He uses all of this to design and build restoration projects that are practical and cost-effective and that suit each site.</p>
+            <p>Robert has done a lot of work in private lands conservation, designing and leading multiple large, multi-year design-build projects in Montana and Wyoming.</p>
+            <p>Robert gets things done in the riverscape. He works on every project himself, from the first site walk through construction and monitoring.</p>
+            <div class="education">
+              <strong>Education</strong>
+              <p>Master of Science, Biosystems Engineering<br>Bachelor of Science, Fisheries Science</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="assets/images/team-scott-turo.jpg" alt="Scott Turo">
+            <h3>Scott Turo</h3>
+            <p class="eyebrow">Fish Biologist, Restoration Project Manager</p>
+            <p>Understanding ecological systems and the species they support is critical to restoration, enabling the development and addition of habitats that support the important life stages of the species present. Scott brings this understanding to his work, drawing on years spent surveying streams and fish populations across the Mountain West and decades working with anadromous and resident species in Oregon, Washington, and Alaska.</p>
+            <p>Whether it's the sediment transport dynamics that shape the stream's pattern and dimensions to create off-channel habitats or the hydraulics that keep those dark pools under the willows clear, Scott will ensure the fish have a voice in the final product. As a project manager specializing in restoration design and implementation, Scott delivers innovative projects that maximize the site's intrinsic potential while preserving a nature-built feel.</p>
+            <div class="education">
+              <strong>Education</strong>
+              <p>Bachelor of Science, Fisheries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h2>TWR</h2>
+      <p class="tagline">River Restoration Design</p>
+      <p class="address">Bozeman, Montana 59715</p>
+      <p><a href="contact.html" style="color:#fff;">Contact TWR &rarr;</a></p>
+      <p class="copyright">&copy; <span id="year"></span> Troutwater Restoration, LLC.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
