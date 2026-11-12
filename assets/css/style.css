@@ -95,6 +95,9 @@ img { max-width: 100%; display: block; }
   background: none;
   border: none;
   font-size: 1.8rem;
+  line-height: 1;
+  padding: 10px;
+  margin: -10px -10px -10px 0;
   cursor: pointer;
 }
 
@@ -114,12 +117,42 @@ img { max-width: 100%; display: block; }
 
   .main-nav ul {
     flex-direction: column;
-    gap: 12px;
+    gap: 4px;
     padding: 16px 0;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 10px 4px;
   }
 
   .site-header {
     flex-wrap: wrap;
+  }
+
+  .site-header .logo img {
+    height: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content ul {
+    font-size: 1.05rem;
+  }
+
+  .hero-content {
+    padding: 32px 20px;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 }
 
