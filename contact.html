@@ -35,15 +35,27 @@
         <h1>Contact TWR</h1>
         <p class="address">Bozeman, Montana 59715</p>
 
-        <!-- TODO: Replace this placeholder once a real contact email/phone or
-             form backend (e.g. Formspree) is set up. The original Wix site's
-             contact form posted to a Wix-hosted backend with no public email
-             or phone number exposed on the page, so there was nothing to
-             carry over directly. -->
-        <div class="contact-placeholder">
-          <p><strong>Contact details coming soon.</strong></p>
-          <p>In the meantime, reach out directly to discuss a project.</p>
-        </div>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mqpqalzw" method="POST">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" maxlength="100">
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="6" maxlength="2000" required></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="New message from troutwaterconsulting.com">
+
+          <button type="submit" class="read-more">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -59,5 +71,40 @@
 
   <script src="assets/js/main.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    (function () {
+      var form = document.getElementById("contact-form");
+      var status = document.getElementById("form-status");
+      if (!form || !status) return;
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        status.textContent = "Sending…";
+        status.className = "form-status";
+
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        })
+          .then(function (response) {
+            if (response.ok) {
+              form.reset();
+              var fields = form.querySelectorAll(".form-field, button");
+              fields.forEach(function (el) { el.style.display = "none"; });
+              status.textContent = "Thanks for reaching out — we'll get back to you soon.";
+              status.className = "form-status form-status-success";
+            } else {
+              status.textContent = "Something went wrong sending that. Please try again, or email us directly.";
+              status.className = "form-status form-status-error";
+            }
+          })
+          .catch(function () {
+            status.textContent = "Something went wrong sending that. Please try again, or email us directly.";
+            status.className = "form-status form-status-error";
+          });
+      });
+    })();
+  </script>
 </body>
 </html>

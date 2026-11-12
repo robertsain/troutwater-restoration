@@ -1,0 +1,495 @@
+/* ABOUTME: Shared stylesheet for the Troutwater Restoration static site.
+   ABOUTME: Defines layout, navigation, hero, cards, and footer styles used across all pages. */
+
+:root {
+  --color-green: #4f8f2f;
+  --color-blue: #2f7ab5;
+  --color-dark: #11201c;
+  --color-gold: #c9a84c;
+  --color-text: #232323;
+  --color-muted: #6b6b6b;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f5f1;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: 2.6rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.4rem; }
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header / Nav */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.site-header .logo img {
+  height: 80px;
+  width: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--color-text);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.main-nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--color-dark);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  padding: 10px;
+  margin: -10px -10px -10px 0;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 0;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 10px 4px;
+  }
+
+  .site-header {
+    flex-wrap: wrap;
+  }
+
+  .site-header .logo img {
+    height: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content ul {
+    font-size: 1.05rem;
+  }
+
+  .hero-content {
+    padding: 32px 20px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 20, 15, 0.45), rgba(10, 20, 15, 0.65));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.hero-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.3rem;
+}
+
+.hero-content li {
+  margin-bottom: 6px;
+}
+
+.hero-content h1 {
+  margin-top: 0.4em;
+}
+
+/* Sections */
+section {
+  padding: 56px 0;
+}
+
+.section-alt {
+  background: var(--color-bg-alt);
+}
+
+.section-dark {
+  background: var(--color-dark);
+  color: #e9e9e4;
+}
+
+.section-dark h2 {
+  color: var(--color-gold);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* Tile grid */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.tile-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (max-width: 760px) {
+  .tile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tile-grid img {
+    height: 220px;
+  }
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 28px;
+  border: 1px solid currentColor;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.read-more:hover {
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Clients */
+.clients-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 48px;
+  max-width: 700px;
+  margin: 24px auto 0;
+  color: var(--color-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 600px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Project types list */
+.project-types {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  gap: 20px;
+}
+
+.project-types li strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.project-types em {
+  color: var(--color-muted);
+  font-style: normal;
+}
+
+/* Services */
+.services-list {
+  display: grid;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.service-number {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  color: var(--color-green);
+}
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 32px;
+}
+
+@media (max-width: 760px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-card img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.team-card .education {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* Project galleries */
+.project-feature {
+  margin-bottom: 64px;
+}
+
+.project-feature h3 {
+  margin-bottom: 4px;
+}
+
+.project-feature .subtitle {
+  color: var(--color-muted);
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid figure {
+  margin: 0;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.gallery-grid figcaption {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: 8px;
+}
+
+/* Footer */
+.site-footer {
+  background: #000;
+  color: #ccc;
+  padding: 48px 0 24px;
+}
+
+.site-footer .container {
+  text-align: center;
+}
+
+.site-footer h2 {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.site-footer .tagline {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-bottom: 24px;
+}
+
+.site-footer .address {
+  margin-top: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.site-footer .copyright {
+  margin-top: 32px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Contact placeholder */
+.contact-placeholder {
+  border: 1px dashed var(--color-muted);
+  padding: 24px;
+  border-radius: 4px;
+  background: var(--color-bg-alt);
+  max-width: 560px;
+  margin: 24px 0;
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 560px;
+  margin: 24px 0;
+  display: grid;
+  gap: 20px;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+}
+
+.form-field label {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.1rem;
+}
+
+.form-field span {
+  color: var(--color-green);
+}
+
+.form-field input,
+.form-field textarea {
+  font: inherit;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid #c9c9c3;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--color-text);
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 1px;
+}
+
+.contact-form button {
+  justify-self: start;
+  background: none;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.form-status {
+  margin: 0;
+}
+
+.form-status-success {
+  color: var(--color-green);
+  font-size: 1.1rem;
+}
+
+.form-status-error {
+  color: #a33b3b;
+}
